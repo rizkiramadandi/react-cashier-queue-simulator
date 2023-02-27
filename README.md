@@ -1,4 +1,4 @@
-# Cashier Queue
+# Cashier Queue Simulator
 
 ## Project Setup
 

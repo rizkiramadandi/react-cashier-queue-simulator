@@ -2,7 +2,7 @@
   "name": "cashier-queue",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/rizkiramadandi/react-cashier-queue",
+  "homepage": "https://github.com/rizkiramadandi/react-cashier-queue-simulator",
   "type": "module",
   "scripts": {
     "dev": "vite",
