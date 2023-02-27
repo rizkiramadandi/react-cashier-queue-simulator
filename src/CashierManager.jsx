@@ -33,7 +33,7 @@ class Cashier {
     this.id = id || new Date().getTime() + Math.floor(Math.random() * 999999)
     this.name = name || 'Cashier'
     this.queue = queue || []
-    this.speed = speed || Math.floor(100 + Math.random() * 900)
+    this.speed = speed || Math.floor(1300 + Math.random() * 400) // around 35 - 45 items/second 
     this.isAvailable = typeof isAvailable !== 'undefined' ? isAvailable : true,
     this.isShifting = false
   }
@@ -285,7 +285,7 @@ export default function CashierManager() {
             dispatch({
             type: ACTION_TYPE.PUSH_QUEUE,
             payload: { 
-                queue: new Customer({ name: generateName(), itemCount: Math.floor(1 + (Math.random() * 99)) })  },
+                queue: new Customer({ name: generateName(), itemCount: Math.floor(1 + (Math.random() * 24)) })  }, // 1 - 25 items/customer
             })
         }
       }

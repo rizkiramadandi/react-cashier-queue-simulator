@@ -2,7 +2,7 @@
     display: flex;
     width: fit-content;
     margin: auto;
-    gap: 1rem;
+    gap: .5rem;
     min-height: calc(100vh - 2.25rem);
     background-color: darkgray;
     overflow-x: auto;
