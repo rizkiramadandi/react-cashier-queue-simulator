@@ -281,11 +281,11 @@ export default function CashierManager() {
     const intervalParent = setInterval(() => {
       // random customer arrive to cashier controller
       if (CUSTOMER_FREQUENCY >= customerRando) {
-        for(let i = 0 ; i < Math.floor(Math.random() * MAX_CUSTOMER_BATCH) ; i++) {
+        for(let i = 0 ; i < Math.floor(1 + (Math.random() * MAX_CUSTOMER_BATCH)) ; i++) {
             dispatch({
             type: ACTION_TYPE.PUSH_QUEUE,
             payload: { 
-                queue: new Customer({ name: generateName(), itemCount: Math.floor(1 + Math.random() * 99) })  },
+                queue: new Customer({ name: generateName(), itemCount: Math.floor(1 + (Math.random() * 99)) })  },
             })
         }
       }
