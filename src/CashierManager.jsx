@@ -275,18 +275,21 @@ export default function CashierManager() {
     }
   }
 
-  let customerFrequency = .2
+  const CUSTOMER_FREQUENCY = .2
   let customerRando = Math.random()
+  const MAX_CUSTOMER_BATCH = Math.floor(cashierList.length / 2)
 
   useEffect(() => {
     const intervalParent = setInterval(() => {
       // random customer arrive to cashier controller
-      if (customerFrequency >= customerRando) {
-        dispatch({
-          type: ACTION_TYPE.PUSH_QUEUE,
-          payload: { 
-            queue: new Customer({ name: generateName(), itemCount: Math.floor(1 + Math.random() * 99) })  },
-        })
+      if (CUSTOMER_FREQUENCY >= customerRando) {
+        for(let i = 0 ; i < Math.floor(Math.random() * MAX_CUSTOMER_BATCH) ; i++) {
+            dispatch({
+            type: ACTION_TYPE.PUSH_QUEUE,
+            payload: { 
+                queue: new Customer({ name: generateName(), itemCount: Math.floor(1 + Math.random() * 49) })  },
+            })
+        }
       }
       customerRando = Math.random()
     }, 1000)
