@@ -6,6 +6,7 @@ import ProfileIcon from "./assets/profile-icon.svg"
 export default function Cashier({ cashier, dispatch }) {
 
     useEffect(() => {
+        console.log(cashier.name, "triggered")
         const intervalParent = setInterval(() => {
             dispatch({ type: ACTION_TYPE.SCAN_QUEUE, payload: { id: cashier.id } })
             if(cashier.getTotalQueue() <= 0) {
@@ -13,7 +14,7 @@ export default function Cashier({ cashier, dispatch }) {
             }
         }, cashier.getSpeed())
         return () => clearInterval(intervalParent)
-    }, [cashier.queue.length])
+    }, [cashier.getTotalQueue() > 0])
 
     return (
         <>

@@ -41,12 +41,7 @@ class Cashier {
     this.queue.push(queue)
   }
   shiftQueue() {
-    if(this.isShifting) {
-        setTimeout(() => {
-            this.queue.shift()
-            this.isShifting = false
-        },1000)
-    }
+    this.queue.shift()
   }
   scanQueue() {
     if (this.queue.length > 0) {
@@ -54,7 +49,10 @@ class Cashier {
             this.queue[0].setItemCount(this.queue[0].getItemCount() - 1)
         if (this.queue[0].getItemCount() <= 0 && !this.isShifting) {
             this.isShifting = true
-            this.shiftQueue()
+            setTimeout(() => {
+                this.shiftQueue()
+                this.isShifting = false
+            },1000)
         }
     }
   }
@@ -287,7 +285,7 @@ export default function CashierManager() {
             dispatch({
             type: ACTION_TYPE.PUSH_QUEUE,
             payload: { 
-                queue: new Customer({ name: generateName(), itemCount: Math.floor(1 + Math.random() * 49) })  },
+                queue: new Customer({ name: generateName(), itemCount: Math.floor(1 + Math.random() * 99) })  },
             })
         }
       }
