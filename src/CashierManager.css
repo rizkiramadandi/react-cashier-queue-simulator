@@ -1,0 +1,35 @@
+.cm-container {
+    text-align: center;
+    position: fiex;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.cm-form {
+    display: flex;
+    justify-content: center;
+}
+
+.cm-input-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.cm-input {
+    background: none;
+    border: none;
+    border-bottom: .1rem solid rgba(0, 0, 0, .25);
+    padding: .5rem;
+}
+
+.cm-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+}

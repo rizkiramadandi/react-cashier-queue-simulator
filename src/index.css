@@ -1,0 +1,22 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: monospace !important;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+button, [role="button"] {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
