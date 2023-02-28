@@ -1,6 +1,7 @@
 # Cashier Queue Simulator
 ini conflict
 ini idak
+Simulator for queueing in cashier using react
 ## Project Setup
 
 ```sh
