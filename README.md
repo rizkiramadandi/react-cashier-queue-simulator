@@ -1,5 +1,5 @@
 # Cashier Queue Simulator
-
+Simulator for queueing in cashier using react
 ## Project Setup
 
 ```sh
