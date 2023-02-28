@@ -1,5 +1,6 @@
 # Cashier Queue Simulator
-
+ini conflict
+ini idak
 ## Project Setup
 
 ```sh
